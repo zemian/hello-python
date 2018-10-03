@@ -1,0 +1,35 @@
+# Python Lesson: List Comprehension
+#
+# List Comprehension is a short hand way to construct a certain pattern of list in a
+# very concise way (one line). The patern is usually when you start with an empty
+# list, and then you use for loop to append items into the list to build up the list.
+#
+# For example
+mylist []
+for i in range(1, 11):
+    mylist.append(i)
+
+# Above can be written in one line like this
+mylist = [i for i in range(1, 11)]
+
+# That's pretty short! The formal syntax of List Comprehension is
+#    [ expression sequence_generator ]
+# One of the most common sequence_generator is just a for loop (there are nother types,
+# but you will learn them in another lesson). And the expression can be any Python
+# code. That means you can evaulate variable, operation or even functions!
+# For example, here will doulbe the list we generated
+mylist = [i * 2 for i in range(1, 11)]
+
+# If you have trouble reading it, you can use parenthesis on the expression to make it
+# more readable, but you can't use parenthesis that with the sequence_generator part.
+mylist = [ (i * 2) for i in range(1, 11) ]
+
+# Note that you can even add if condition to List Comprehension to filter out
+# the items from sequence_generator. For example, here will create even numders
+# assign into a list
+mylist = [i for i in range(1, 11) if i % 2 == 0]
+
+#
+# The List Comprehension can be very cool and short way to create list, but
+# if conditions gets complicated, it can get ugly. In these case, you better off
+# just write out the long way.

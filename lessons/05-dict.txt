@@ -1,0 +1,84 @@
+# Python Lesson: Using Dictionary Data Type
+
+# == Introducing Dictionary
+# Python has another common data type called Dictionary (or Dict or
+# sometimes call the Map. Like a List, a dictionary data type will hold one
+# or more data value together, but intead of accessing it by index,
+# you would use a "key" instead. Therefore each value comes with
+# key:value pair, and they are put together using curly bracelets.
+#
+# Example
+mydict = {'first_num': 99, 'second_num': 88}
+print(mydict['first_num'])
+print(mydict['second_num'])
+print(mydict)
+
+# A dictionary can have many entries and we often split
+# them into multiple lines for easy to read
+capitals = {'FL': 'Tallahassee', 
+'GA': 'Atlanta', 
+'CA': 'Sacromento', 
+'NY': 'Albany'}
+print(capitals['FL'])
+
+# You can loop through all the key:value pairs in a Dict by
+# calling items() function. This let you unpack key and value
+# at the same time.
+for key, value in capitals.items():
+	print("Capital of {} is {}".format(key, value))
+
+# Or you may loop through the Dict using keys() function first:
+for key in capitals.keys():
+	# Then you get the value from the Dict
+	value = capitals[key]
+	print("Capital of {} is {}".format(key, value))
+
+# Or if you want just the values, and do not care which key it is
+# from, then you can use values() function. This is not
+# as useful, since often you want the key part as well.
+for value in capitals.values():
+	print("The city of {}".format(value))
+
+# Updating dictionary
+coordinate = {'x': 100.25, 'y': 0.0}
+print(coordinate)
+coordinate['y'] = -25.0
+print(coordinate)
+
+# Add more entries after dictionary already exists
+coordinate['z'] = 0.0
+print(coordinate)
+
+# Or start an empty dictionary, then slowly add entry to it
+capitals = {}
+capitals['FL'] = 'Tallahassee'
+capitals['GA'] = 'Atlanta'
+capitals['CA'] = 'Sacromento'
+capitals['NY'] = 'Albany'
+print(capitals['FL'])
+
+# You have to ensure key is unique in your dict, or you will 
+# overide your existing DATA!
+print(capitals)
+capitals['NY'] = 'ALBANY'
+print(capitals)
+
+# Or delete an entry by key
+del coordinate['z']
+print(coordinate)
+
+# Actuall the "del" is a statement keyword, and it works on LIST as well
+mylist = [99, 88, 66]
+print(mylist)
+del mylist[1]
+print(mylist)
+
+# Check the size or length in dictionary
+# NOTE: len() gives number of key:value pair entries, not keys + values together.
+print(len(mylist))
+
+# You can check whether a key exists in a dict or not
+if 'FL' in capitals:
+	print("We have FL covered!")
+if 'CO' not in capitals:
+	print("Oh oh, no Colorado in the dict.")

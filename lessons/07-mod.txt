@@ -1,0 +1,34 @@
+# Python Lesson: Functions and Modules
+#
+# When you have created many functions, it's better to
+# organized them into a module, or library. These can
+# be distribute to other programmers to reuse your code
+#
+# Python has many buit-in modules!
+# See https://docs.python.org/3/library/
+
+# Example using an standard built-in library module named "random"
+# See https://docs.python.org/3/library/random.html
+
+import random
+num = random.randint(1, 10)
+print(num)
+
+for _ in range(10):
+	print(random.randint(1, 10), end=' ')
+print()
+
+# It's easy to create your own module. It turns out the file
+# you save your code IS the module NAME!
+#
+# Example create a file named "mymodule.py" and create a function
+# there like this:
+def hello():
+	print("Hello")
+# Then in second file, you can use it as module!
+import mymodule
+print(mymodule.hello())
+
+# == Exercise Assignment
+# Explore the standard Python built-in modules, choose 3 modules
+# and invoke one of their function and print its output.

@@ -1,0 +1,68 @@
+# Python Lesson: Functions and Arguments
+
+# You already used Python built-in function such as print()
+# everwhere. There are actually many more built-in Python functions 
+# that you can use.
+# See https://docs.python.org/3/library/functions.html
+
+# And of course, you write your own function as well!
+
+# == Creating Functions
+# To avoid repeating same block of code everywhere, we store
+# them into a function, and then we can call (or invoke) the function
+# one or more times. A function can have a name, just like a variable,
+# and you invoke a function by its name with parenthesis.
+def print_name():
+	print("Kenny")
+
+print_name()
+print_name()
+print_name()
+
+for _ in range(5):
+	print_name()
+
+# You can create a function that does NOTHING (dummy functions)
+# We sometimes want this to testing or debugging as placeholder.
+def dummy_func():
+	pass
+
+print("Here is a funciton that does NOTHING!")
+dummy_func()
+
+# == Passing Arguments to Function
+# To make function more reusable, we often will expose the variables
+# we use in the code block as funtion arguments, so that the caller
+# (person who will invoke it, often yourself ^_^) can pass in
+# different values, but the function remain the same.
+
+# Example
+def double_value(num):
+	return num * 2
+
+print(double_value(5))
+print(double_value(10))
+
+# You can create more arguments, and they can have default value if 
+# caller does not pass in the value.
+def print_name(first_name, last_name = "Deng"):
+	print("Your full name is " + first_name + " " + last_name)
+
+print_name("Kenny")
+print_name("Zemian")
+print_name("Lily")
+print_name("Julie", "Ng")
+
+# You can explicily name the argument, and if you do this, the
+# order does not matter!
+print_name(first_name = "Lily", last_name = "Deng")
+print_name(last_name = "Deng", first_name = "Lily")
+
+# == Exercise Assignments
+# 1. Write a function that take a number and return True if
+#    it's even, or False if not.
+# 2. Write a function that takes two numbers and return the sum
+#    of the two values.
+# 3. Write a function that take a list and return a different list that is
+#    in reverse order
+#
