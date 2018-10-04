@@ -1,0 +1,28 @@
+# Python Lesson: Introducing Turtle Graphics
+#
+# Python comes with an easy to use graphic module library called "turtle"
+# that let you draw lines, shapes, colors and other visual
+# elements on a Canvas screen.
+# 
+# Using Turtle module can be fun, and it helps programmer exercise
+# python programming skill whle creating something that has visual
+# effect on screen.
+# 
+# More on Turtle module can be see on 
+# https://docs.python.org/3.0/library/turtle.html
+#
+# Example: Moving the turtle as a coordinate dot in middle of the screen
+#          as it move, it will draw a line. This example will draw a
+#          square on screen.
+import turtle
+
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+turtle.forward(100)
+turtle.right(90)
+
+turtle.done()

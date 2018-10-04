@@ -1,0 +1,85 @@
+# Python Lesson: More on List and Tuple
+
+# Common operations you can do with a list
+
+# Index access
+mylist = [99, 77, 66]
+print(mylist[0])
+
+# Slicing
+sublist = mylist[:2]
+print(sublist)
+
+# Update/replace existing item
+mylist[0] = 88
+print(mylist)
+
+# Delete an existing item
+del mylist[0]
+
+# Append an item to end of list
+mylist.append(55)
+print(mylist)
+
+# Or start with an empty list then slowly add items into it
+oddlist = []
+for i in range(10):
+	if i % 2 == 0:
+		oddlist.append(i)
+print(oddlist)
+
+# Two lits can be concatenate together
+mylist2 = ['aa', 'bb', 'cc']
+biglist = mylist + mylist2
+print(biglist)
+
+# Check size/lenght of the list
+print(len(mylist))
+
+# Check whether an item is in a list or not
+if 66 in mylist:
+	print("We found Mr Sixty.")
+
+# Multiplication operator works on list too! It duplidate the items
+# with N number of times.
+n = 5
+print(mylist * n)
+
+# We can also do "*" with string, since string can be thought of list
+bigname = "Kenny" * 5
+print(bigname)
+
+# == Introducing Tupple
+#
+# Tuple is just like list, except that once you created it, it can
+# not be modified. You can't append to it, or delete items from it.
+# We call this immutable list, or Tuple. We create Tuple by using
+# parenthesis instead of brakets.
+mytuple = (99, 88, 77)
+print(mytuple[0])
+print(mytuple[:2])
+print(len(mytuple))
+
+# These will result in errors
+#del mytuple[0]
+#mytuple.append(66)
+
+# You can't modify Tuple items, but you can just override the whole Tuple though
+mytuple = ('aa', 'bb', 'cc')
+print(mytuple)
+
+# Sepcial case of Tuple of one element has extra comma!
+# This is because parenthesis are used to group order of expression already.
+# Note that you can't create empty Tuple either! 
+mytuple = (99,)
+my_not_tuple = (99)
+my_not_tuple2 = ()
+
+# So why use Tuple instead of list? Often time we know the data want is 
+# constant, meaning they SHOULD NOT change, and if they do, they are 
+# consider another copy of data. In these case, it's better to use
+# Tuple since it guarantee the value will not change! It makes data more
+# safe and logic more robust.
+# You can read more here: https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
+# (NOTE: From Python documentation, "sequence" is another general term for list.)
+

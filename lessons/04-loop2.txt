@@ -1,0 +1,76 @@
+# Python Lesson: More on while vs for loop, and NEW LINE characters
+
+# == NEW LINE characters
+# Eeach print() will print the value passed to it, and a NEW LINE character
+# automatically.
+print(99)
+print("Hello")
+
+# What is a NEW LINE characters? It's a special character that 
+# will insert a BLANK LINE in your output.
+print("Hello\n")
+print("Hello\n\n")
+print("\nHello")
+
+# The print() itself will automatically use "\n" at the end! To change this,
+# you need to explicitly pass the parameter
+print("Hello", end="")
+print("Hello", end="\n")
+print()
+
+# You can print multiple variables or values at the same time,
+# and they can be all different types. They each separated by comma.
+# NOTE: This is often used to troubleshooting (or we call debugging), 
+# when we want to see what happen inside code to print out variables.
+print(11, "Kenny", 3.14, "Circle")
+
+
+# == How to break out of loop EARLY
+# Both while and for loop can exit early in your code block immediately with
+# a keyword "break". This will skip remaining of the code block in your loop!
+
+# While example:
+counter = 0
+while counter < 10:
+	counter = counter + 1
+	if counter >= 5:
+		break
+	print(counter, end=' ')
+print()	
+
+# A for loop examples works the same
+mylist = list('Kenny')
+for character in mylist:
+	if character == 'n':
+		break
+	print(character, end=' ')
+print()
+
+# == Skiping part of code in loop, but continue til end
+# Sometimes we want complete the loop, but skip portion of the code block.
+# in this case, you can tell the codeblock to "continue" to next
+# iteration/walk of the loop
+
+# While loop example:
+counter = 0
+while counter < 10:
+	counter = counter + 1
+	if counter % 2 == 0:
+		continue
+	print(counter, end=' ')
+print()
+
+# Same can be done with for loop
+mylist = list('Kenny')
+for character in mylist:
+	if character in ['a', 'e', 'i', 'o', 'u']:
+		continue
+	print(character, end=' ')
+print()
+
+# == Exercise Assignment
+# 1) For each word in a list, print the number of vowels and consonants it has.
+# word_list = ['civic', 'eat', 'radar', 'level', 'madam', 'fun']
+# 2) Print each words above with double space (2 NEWLINES between words)
+# 3) Print all words above in one line with one space between
+
