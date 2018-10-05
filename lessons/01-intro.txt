@@ -1,18 +1,18 @@
 Python https://www.python.org/
 
-Python is an easy to learn programming language that allow you
-to do many things with computer. You can use to modify Minecraft,
-write new Video Games, solve logic puzzles etc.
+Python is an easy to learn programming language that allows you
+to do many things with computer. You can use it to modify Minecraft,
+game, write new Video Games, or solve logic puzzles etc.
 
 A programming language is needed to control the computer. In general,
-a programming language allow you to write computer instructions, we 
-call "code" or "program" in a specific way (style). Many conputer 
-instructions are written to manipulate and change data we stored to 
-represents our world (or game). Or in many case, we write program
+a programming language allows you to write computer instructions, we 
+call "code" or "program" in a specific way. Many conputer 
+instructions are written to manipulate and change the data we stored to 
+represents our world (or game). In many cases, we write program
 to control the input/output of a device, such as a terminal console
 (monitor) devide, so we can see and verify our result.
 
-So Python code/program has two main things:
+So Python program has two main things:
 
 	Data - integer, string, list of integer or string, dictionary
 	       data for key lookup, or even Objects the represents our
@@ -23,7 +23,7 @@ So Python code/program has two main things:
 	       if/else condition check and skip code, function to execute
 	       the code block etc.
 
-Python let you write program code in two way:
+Python let you write program code in two ways:
 
 1) Using the python shell, which you can try out code directly
    one line at a time and see result immediately. Try:
