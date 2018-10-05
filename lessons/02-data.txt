@@ -1,5 +1,5 @@
 # 
-# Python has 3 very common data types: int, string, and list
+# Python has few very common data types: int, string, and list
 #
 
 # == Working with int
