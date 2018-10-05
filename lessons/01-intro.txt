@@ -1,6 +1,6 @@
 Python https://www.python.org/
 
-Python is a easy to learn programming language that allow you
+Python is an easy to learn programming language that allow you
 to do many things with computer. You can use to modify Minecraft,
 write new Video Games, solve logic puzzles etc.
 
