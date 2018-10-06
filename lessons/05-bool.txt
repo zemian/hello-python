@@ -1,14 +1,25 @@
+You have learned that while loop depends on a "boolean" condition to tell
+when to stop and exit the loop. This "boolean" condition has two state:
+True or False, and Python has a special data type to store it called "bool". 
+In Python, you often will evaluate a statement that will
+return you a bool result. This same bool can also be used in a "if" control
+statement. Combining with "if" and "else", you can choose to skip certain
+block of code. We call these code branching.
+
 # Python Lesson: Boolean, None, and If/Else
 #
 # == Boolean values
-# A boolean is a special type that can only hold two values: True or False
+# A bool is a special type that can only hold two values: True or False
+# Note that the first letter is capital case!
 flag = True
 print(flag)
 flag = False
 print(flag)
 
-# Python has a special value called None that means NOTHING! and this
-# can also be treated as "False" condition. But it's NOT called a boolean!
+# Python has a special value called None that means "nothing"! and this
+# can also be treated as "False" condition. But note that it's NOT 
+# consider as true bool type, but you can still use it in "if" or "while"
+# condition check and it will count as False!
 myvar = None
 if myvar:
 	print("Not going to print!")
@@ -31,7 +42,7 @@ print(88 in mylist)
 # Many python expression can resulted in boolean type when you use
 # the one of comparators.
 
-# == If/Else and If/ElseIf/Else
+# == If/Else and If/Else If/Else
 #
 # A boolean is a condition you may use to control "while" or "if"
 # code block evaluation. You learned while in details in past, but

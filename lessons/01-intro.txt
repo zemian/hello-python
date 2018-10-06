@@ -26,11 +26,34 @@ So Python program has two main things:
 Python let you write program code in two ways:
 
 1) Using the python shell, which you can try out code directly
-   one line at a time and see result immediately. Try:
+   one line at a time and see result immediately. You can start
+   the python shell from a terminal console like this:
 
-   >>> 1 + 1
+     console> python3
 
-2) Save code into a file (eg: hello.py) and then run it
-   with "python hello.py" on a terminal console. Try:
+     Python 3.6.4 (default, Jan  7 2018, 15:53:53)
+     [GCC 6.4.0] on cygwin
+     Type "help", "copyright", "credits" or "license" for more information.
+     >>>
 
-   print("Hello")
+     >>> # Now try to use it as calculator
+     >>> 1 + 1
+
+2) Save the code into a file (for example, save the following into 
+   a file named 'hello.py'):
+
+     print("Hello")
+     print(1 + 1)
+
+   and then run the program on a terminal console like this:
+
+     console> python3 hello.py
+
+NOTE: The lastest Python is version 3, and often time the Computer
+you are using will still has older Python 2 installed, so you need
+to invoke python3 to use the latest version. However some system
+might alias the "python" to be latest Python 3 already. You
+can verify your version by running the following:
+
+  console> python -V
+  

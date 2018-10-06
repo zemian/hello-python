@@ -1,28 +1,34 @@
+The second part of learning programming is learning how control the data.
+You have already seen that you can do basic operation on data such as 'int'
+with +, -, * and /. But you can control the data in much more finner level.
+
+Here we will explore two basic control statements that can repeat code.
+
 # Lesson: while loop vs for loop
 #
 # You use while loop when you need repeat code until a condition becomes False.
 #
 # You use for loop when you need to repeat code for each ITEM in a list or sequence.
 
-# # mylist = ['aa', 'bb']
-# # index = 0 
-# # while index < len(mylist):
-# # 	print(mylist[index])
-# # 	index += 1
+mylist = ['aa', 'bb']
+index = 0 
+while index < len(mylist):
+	print(mylist[index])
+	index += 1
 
-# # for index in range(len(mylist)):
-# # 	print(mylist[index])
+for index in range(len(mylist)):
+	print(mylist[index])
 
-# # for item in mylist:
-# # 	print(item)
+for item in mylist:
+	print(item)
 
 # Problem: Print a sum of series numbers from 1 to 100
 
 # Solution: Using for loop
-# result = 0
-# for num in range(1, 101):
-# 	result += num
-# print(result)
+result = 0
+for num in range(1, 101):
+	result += num
+print(result)
 
 # Solution: Using while loop
 # NOTE: Becareful on the while condition when to stop the loop!

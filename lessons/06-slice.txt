@@ -1,0 +1,51 @@
+# Python Lesson: More on List and SubList with Slicing
+
+# == List
+mylist = [99, 88, 77, 66, 55, 44]
+print(mylist)
+print(mylist[1])
+
+# You can also get range of items by SLICING with a colon inside the bracket
+sublist = [mylist[2], mylist[3]]
+print(sublist)
+sublist2 = mylist[2:4]
+print(sublist2)
+
+print(mylist[:4])
+print(mylist[2:])
+print(mylist[-4:-2])
+print(mylist[-4:])
+
+# Slice can support step/increment, with another colon
+print(mylist[::2])
+
+# A negative step will walk through items in list opposite direction (right to left)
+print(mylist[::-2])
+
+# If you do not specify number in slice, it default to all items.
+# Below will print all items in list
+print(mylist[:])
+print(mylist[::])
+
+# We often use slice with -1 step to reverse a list
+print(mylist[::-1])
+
+# Example: Here is a long way to reverse a name
+name = "Kenny"
+print(name)
+name_list = list(name)
+print(name_list)
+reversed_name_list = name_list[::-1]
+print(reversed_name_list)
+reversed_name = "#".join(reversed_name_list)
+print(reversed_name)
+
+# Example: Here is a consise way of reverse a name
+name = "Zemian"
+print("".join(list(name)[::-1]))
+
+# Exercise Problem:
+# For each words in the list below, print True if it is a Palindrome word, 
+# or False if it's NOT.
+word_list = ['civic', 'eat', 'radar', 'level', 'madam', 'fun']
+
