@@ -21,6 +21,16 @@ for index in range(len(mylist)):
 
 for item in mylist:
 	print(item)
+	
+Note that uses space or tab to indent code or block of 
+code. These indentations are very important to Python
+code because its the only way Python can tell each begin
+block and end of block. A CODE BLOCK is simple group
+of one or more lines of code/statements.
+	
+Also in Python, we prefix "#" character to create a 
+comment lines that describe the code. They are not
+code and will not the executed.
 
 # Problem: Print a sum of series numbers from 1 to 100
 
