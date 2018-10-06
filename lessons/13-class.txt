@@ -16,7 +16,7 @@ two attributes named x and y. Python let you do this
 easily using Class.
 
 But wait, can't we just use a dict
-to di that? Actually a dict is very
+to do that? Actually a dict is very
 similar to user type
 because it let you use any name as key
 to retrieve any data. But using Class
@@ -31,7 +31,8 @@ class Point:
   def print_xy(self):
     print(self.x, self.y)
   
-Now you can use it like this:
+Now you can create object instance from the
+Class like this:
 
 p1 = Point()
 p1.x = 0
@@ -52,7 +53,7 @@ p1.print_xy()
 Now we will explain how the Class syntax works. A class 
 let you redefine a data type by grouping one or more
 other data together called attributes (think of them
-as variables unside the class). 
+as variables inside the class). 
 
 Then you can also define 
 special functions called methods inside the class
