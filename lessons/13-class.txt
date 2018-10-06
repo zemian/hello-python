@@ -1,0 +1,45 @@
+= Intro to Classes and Objects
+
+Besides the builtin data types such as int, str, list and dict,
+Python also let you define your own custom data types using
+Class definition.
+
+For example, instead of passing around two variables 
+x and y to represents a coordinate point in your program, 
+it would be better if we can 
+use a direct data type called Point, and it should have 
+two attributes named x and y. Python let you do this 
+easily using Class.
+
+class Point:
+  def print_xy(self):
+    print(self.x, self.y)
+  
+Now you can use it like this:
+
+p1 = Point()
+p1.x = 0
+p1.y = 0
+p1.print_xy()
+
+p1.x = 15
+p1.y = 12
+p1.print_xy()
+
+p2 = Point()
+p2.x = 0
+p2.y = 0
+p2.print_xy()
+
+p1.print_xy()
+
+Now we will explain how the Class syntax works. A class 
+let you redefine a data type by grouping one or more
+other data together called attributes (think of them
+as variables unside the class). 
+
+Then you can also define 
+special functions called methods inside the class
+that can manipulate the attributes. A method name can be 
+anything you want to be, but it needs to have one 
+parameter, usually named "self".
