@@ -30,6 +30,21 @@ def dummy_func():
 print("Here is a funciton that does NOTHING!")
 dummy_func()
 
+A function can have one or more statements, all indented 
+by same space. Note that proper indents are important 
+for code blocks!
+
+def print_loop():
+  print("begin function")
+  for i in range(10):
+     print(i)
+  print("end of function")
+
+A function can also return a value to caller by a "return" 
+statement. Note that return statement doe not have to be 
+last line in function, but once executed, it will exit 
+the function!
+
 # == Passing Arguments to Function
 # To make function more reusable, we often will expose the variables
 # we use in the code block as funtion arguments, so that the caller
