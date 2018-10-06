@@ -31,7 +31,7 @@ print("Here is a funciton that does NOTHING!")
 dummy_func()
 
 A function can have one or more statements, all indented 
-by same space. Note that proper indents are important 
+by same space. Note that proper nested indents are important 
 for code blocks!
 
 def print_loop():
@@ -44,6 +44,11 @@ A function can also return a value to caller by a "return"
 statement. Note that return statement doe not have to be 
 last line in function, but once executed, it will exit 
 the function!
+
+import random
+def create_rand_int():
+  n = random.ranint(1, 10)
+  return n
 
 # == Passing Arguments to Function
 # To make function more reusable, we often will expose the variables
