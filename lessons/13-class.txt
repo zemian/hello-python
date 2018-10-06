@@ -48,6 +48,7 @@ p2.x = 0
 p2.y = 0
 p2.print_xy()
 
+# Note that p2 and p1 each has different values of x and y!
 p1.print_xy()
 
 Now we will explain how the Class syntax works. A class 
