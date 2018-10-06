@@ -2,7 +2,11 @@
 
 Besides the builtin data types such as int, str, list and dict,
 Python also let you define your own custom data types using
-Class definition.
+Class definition. To use it, you would create object instance
+from the Class definition. Each object instance will
+be same type by the Class name, but it will have
+their own attritutes values. Each object instance is unique
+and has their own data space.
 
 For example, instead of passing around two variables 
 x and y to represents a coordinate point in your program, 
@@ -10,6 +14,18 @@ it would be better if we can
 use a direct data type called Point, and it should have 
 two attributes named x and y. Python let you do this 
 easily using Class.
+
+But wait, can't we just use a dict
+to di that? Actually a dict is very
+similar to user type
+because it let you use any name as key
+to retrieve any data. But using Class
+is more easier and natural. For example
+instead of using quotes on key to get data
+a Class object simple use dot attritute name
+notation. Another benefit of using 
+Class is that we can add custom
+fuctions to the data type!
 
 class Point:
   def print_xy(self):
@@ -42,4 +58,6 @@ Then you can also define
 special functions called methods inside the class
 that can manipulate the attributes. A method name can be 
 anything you want to be, but it needs to have one 
-parameter, usually named "self".
+parameter, usually named "self". This "self" variable
+is the unique object instance of the Class. Remember each
+object instance is unique and has its own data space.
