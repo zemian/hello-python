@@ -28,7 +28,7 @@ for i in range(10):
 		oddlist.append(i)
 print(oddlist)
 
-# Two lits can be concatenate together
+# Two lists can be concatenate together
 mylist2 = ['aa', 'bb', 'cc']
 biglist = mylist + mylist2
 print(biglist)
