@@ -121,4 +121,5 @@ print(message)
 
 NOTE the type name for string in Python is actually
 "str", not "string". There actually many functions
-you can peform with the str type variable. See for more.
+you can peform with the str type variable. See 
+https://docs.python.org/3/library/string.html for more.
