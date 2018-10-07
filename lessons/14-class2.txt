@@ -25,7 +25,7 @@ with double underscore are special for customization and you should not
 create your own method like these.
 
 See https://docs.python.org/3/reference/datamodel.html under section 
-"Basic customization¶" for more details.
+"Basic customization" for more details.
 
 
 == Base Classes
