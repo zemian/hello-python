@@ -2,4 +2,4 @@
 
 == lessons
 
-Python Lessons for Kenny.
+Python Lessons for Kenny. See lessons folder. 
