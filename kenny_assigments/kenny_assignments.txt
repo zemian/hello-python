@@ -1,0 +1,24 @@
+= List
+
+== Assignment: Print every 3 elements in list
+
+1. Generate a list of 20 random number from 1 to 100
+2. Print first element, and then every 3rd elements in the list
+
+== Assignment: Shuffle a list
+
+== Assignment: Sort a list
+
+== Assignment: List slice
+
+= String
+
+== Assignment: Letters slice
+
+== Assignment: Convert upper case
+
+== Assignment: Scramble a word
+
+== Assignment: Title case
+
+== Assignment: Letters frequency

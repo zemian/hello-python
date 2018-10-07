@@ -1,0 +1,25 @@
+states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+          'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia',
+          'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas',
+          'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts',
+          'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana',
+          'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico',
+          'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma',
+          'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina',
+          'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia',
+          'Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
+		  
+states = ['Colorado', 'Pennsylvania', 'New Jersey', 'Iowa', 'Arizona',
+          'Minnesota', 'North Dakota', 'Idaho', 'Alabama', 'South Carolina',
+          'Rhode Island', 'Oregon', 'Utah', 'Georgia', 'Virginia', 'Arkansas',
+          'Florida', 'Texas', 'Tennessee', 'Maryland', 'Indiana', 'Montana',
+          'New Hampshire', 'South Dakota', 'Ohio', 'Maine', 'Nevada',
+          'Wisconsin', 'Oklahoma', 'Vermont', 'Connecticut', 'Kentucky',
+          'New Mexico', 'Mississippi', 'New York', 'Illinois',
+          'West Virginia', 'Hawaii', 'Louisiana', 'North Carolina',
+          'Nebraska', 'Missouri', 'Michigan', 'California', 'Alaska',
+          'Massachusetts', 'Kansas', 'Washington', 'Wyoming', 'Delaware']
+
+
+1. Create a list of all US state names. (To save you some typing, I will give you a test.py I have typed up all the names already!)
+2. Go through the list and print all states that starts with 'A'
