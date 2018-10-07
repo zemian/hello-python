@@ -63,3 +63,13 @@ anything you want to be, but it needs to have one
 parameter, usually named "self". This "self" variable
 is the unique object instance of the Class. Remember each
 object instance is unique and has its own data space.
+
+So how come we invoke the method without any parameter
+and yet the "self" variable is populated? 
+You can think of this line
+
+p1.print_xy()
+
+is actually translated by Python engine into this:
+
+Point.print_xy(p1)
