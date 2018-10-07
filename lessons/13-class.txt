@@ -3,73 +3,77 @@
 Besides the builtin data types such as int, str, list and dict,
 Python also let you define your own custom data types using
 Class definition. To use it, you would create object instance
-from the Class definition. Each object instance will
-be same type by the Class name, but it will have
-their own attritutes values. Each object instance is unique
-and has their own data space.
+from the Class name with a parenthensis. Each object instance will
+be same type, but it will have their own set pf attritutes values. 
+The attributes name can be anything you want to name it to be that
+best describe your data. Each object instance is unique and has their 
+own data space to store the attribute values.
 
-For example, instead of passing around two variables 
+For example, instead of passing around two separate variables 
 x and y to represents a coordinate point in your program, 
-it would be better if we can 
-use a direct data type called Point, and it should have 
-two attributes named x and y. Python let you do this 
-easily using Class.
+it would be better if we can use a custom data type called Point, and it 
+should have two attributes named x and y. Python let you do this
+easily using a Class definition.
 
-But wait, can't we just use a dict
-to do that? Actually a dict is very
-similar to user type
-because it let you use any name as key
-to retrieve any data. But using Class
-is more easier and natural. For example
-instead of using quotes on key to get data
-a Class object simple use dot attritute name
-notation. Another benefit of using 
-Class is that we can add custom
-fuctions to the data type!
+But wait, can't we just use a dict to do that? Actually a dict is very
+similar to custom user type because it let you use any name as key
+to retrieve any data. But using Class is more easier and natural. 
+For example instead of using quotes on key to get data, a Class object 
+would use dot attritute name notation. (example: my_point.x) Another 
+benefit of using Class is that we can add custom functions to the 
+data type!
 
-class Point:
-  def print_xy(self):
-    print(self.x, self.y)
+Here is an example of a Class definition.
+
+	class Point:
+	  def print_xy(self):
+	    print(self.x, self.y)
   
-Now you can create object instance from the
-Class like this:
+Now you can create object instance from the Class like this:
 
-p1 = Point()
-p1.x = 0
-p1.y = 0
-p1.print_xy()
+	# Create first object instance and store into variable p1
+	p1 = Point()
+	p1.x = 0
+	p1.y = 0
+	p1.print_xy()
 
-p1.x = 15
-p1.y = 12
-p1.print_xy()
+	# Modify p1
+	p1.x = 15
+	p1.y = 12
+	p1.print_xy()
 
-p2 = Point()
-p2.x = 0
-p2.y = 0
-p2.print_xy()
+	# Creawte second object instance and store into variable p2
+	p2 = Point()
+	p2.x = 0
+	p2.y = 0
+	p2.print_xy()
 
-# Note that p2 and p1 each has different values of x and y!
-p1.print_xy()
+	# Note that p2 and p1 each has different values of x and y!
+	p1.print_xy()
 
-Now we will explain how the Class syntax works. A class 
-let you redefine a data type by grouping one or more
-other data together called attributes (think of them
-as variables inside the class). 
+Now we will explain how the Class syntax works. A class let you define 
+a custom data type by grouping one or more other existing data together.
+The data defined inside the class are called attributes (think of them
+as variables inside the class).
 
-Then you can also define 
-special functions called methods inside the class
-that can manipulate the attributes. A method name can be 
-anything you want to be, but it needs to have one 
-parameter, usually named "self". This "self" variable
-is the unique object instance of the Class. Remember each
-object instance is unique and has its own data space.
+You can also define special functions, called methods, inside the class
+that can be used to manipulate the attributes. A method name can be 
+anything you want to be, but it needs to have one parameter, usually 
+named "self". This "self" variable is automatically populated to reference 
+the object instance of the Class. Remember each object instance is unique 
+and has its own data space. You would use "self" to access attributes
+for a specific object instance.
 
-So how come we invoke the method without any parameter
-and yet the "self" variable is populated? 
-You can think of this line
+To help you see how Python automatically assign the "self" variable, you
+can think of the following method used from above example:
 
-p1.print_xy()
+	p1.print_xy()
 
-is actually translated by Python engine into this:
+is loosely translated by Python automatically into this:
 
-Point.print_xy(p1)
+	Point.print_xy(p1)
+
+So you see, the "self" parameter is assigned and pointed to the object
+instance that's it self is referencing. Other programming
+language, such as Java, will call the "self" concept with an implicit
+"this" variable instead.
