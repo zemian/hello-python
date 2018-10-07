@@ -1,0 +1,53 @@
+= More on class constructor and base class
+
+== Class Constructor
+
+When you're creating new object instance from a Class, you are actually
+invoking a special method. It turns out that you can customize this special
+method and provide parameters to initialize the class. For example:
+
+	class Point:
+		def __init__(self, x, y):
+			self.x = x
+			self.y = y
+
+		def print_xy(self):
+			print(self.x, self.y)
+
+Now, we can create instance and populate it at the same time.
+
+	p1 = Point(0, 0)
+	p1.print_xy()
+
+In fact, Python has many of these ___xxx___() special methods that have
+different meanings and usages that you can customize. Methods that starts
+with double underscore are special for customization and you should not
+create your own method like these.
+
+See https://docs.python.org/3/reference/datamodel.html under section 
+"Basic customization¶" for more details.
+
+
+== Base Classes
+
+Python classe can inherit from another class and forms a parent and child
+hierachy. For example:
+
+	class Shape:
+		def calculate_area(self):
+			pass
+
+	class Square(Shape):
+		def __init__(self, base, height):
+			self.base = base
+			self.height = height
+
+		def calculate_area(self):
+			return self.base * self.height 
+
+	class Circle(Shape):
+		def __init__(self, radius):
+			self.radius = radius
+
+		def calculate_area(self):
+			return 3.14 * self.radius * self.radius

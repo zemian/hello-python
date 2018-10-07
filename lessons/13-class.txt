@@ -1,5 +1,7 @@
 = Intro to Classes and Objects
 
+== Intro
+
 Besides the builtin data types such as int, str, list and dict,
 Python also let you define your own custom data types using
 Class definition. To use it, you would create object instance
@@ -22,6 +24,8 @@ For example instead of using quotes on key to get data, a Class object
 would use dot attritute name notation. (example: my_point.x) Another 
 benefit of using Class is that we can add custom functions to the 
 data type!
+
+== Defining a Class and Creating Object Instance
 
 Here is an example of a Class definition.
 
@@ -77,3 +81,21 @@ So you see, the "self" parameter is assigned and pointed to the object
 instance that's it self is referencing. Other programming
 language, such as Java, will call the "self" concept with an implicit
 "this" variable instead.
+
+== More Example with Class Method
+
+Let's improve the class with an extra method for update
+
+	class Point:
+	  def print_xy(self):
+	    print(self.x, self.y)
+  
+	  def update_xy(self, x, y):
+	    self.x = x
+	    self.y = y
+
+Now we can populate the x and y values with single method instead
+
+	p1 = Point()
+	p1.update_xy(15, 12)
+	p1.print_xy()
