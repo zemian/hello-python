@@ -29,6 +29,10 @@ def hello():
 import mymodule
 print(mymodule.hello())
 
+NOTE: It's recommend to use all lowercase and without dash/hyphen (
+but undersscore is okay) for module name. If you use hypen in your
+module/directory, then it will not import properly.
+
 # == Exercise Assignment
 # Explore the standard Python built-in modules, choose 3 modules
 # and invoke one of their function and print its output.
