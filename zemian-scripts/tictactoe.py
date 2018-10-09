@@ -261,7 +261,12 @@ def main_loop():
 				row, column = get_computer_play_position(board, current_player_marker)
 
 			# Set the marker on board!
-			board[row][column] = current_player_marker
+			if board[row][column] != ' ':
+				# This should not happen, but added for safety check to ensure game
+				# is not corrupted
+				print("ERROR: Player selected invalid position: {} {}".format(row, column))
+			else:	
+				board[row][column] = current_player_marker
 
 			# Check for wining and end the game if it's over
 			if check_wining(board, current_player_marker):
