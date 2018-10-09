@@ -90,7 +90,7 @@ def about_to_win_pos(board, player_marker):
 	for i in range(len(board)):
 		idx = check_two_markers_in_row(board[i], player_marker)
 		if idx >= 0:
-			return (0, idx)
+			return (i, idx)
 
 	idx = check_two_markers_in_row([board[0][0], board[1][0], board[2][0]], player_marker)
 	if idx >= 0:
@@ -120,15 +120,14 @@ def about_to_win_pos(board, player_marker):
 	return None
 
 def get_available_board_indexes(board):
-	row_indexes = []
-	column_indexes = []
+	'''Return list of tuples. Each tuple is a row and column indexes of empty positionon 
+	on the board.'''
+	pos = []
 	for row in range(len(board)):
 		for column in range(len(board[row])):
 			if board[row][column] == ' ':
-				row_indexes.append(row)
-				column_indexes.append(column)
-	return (row_indexes, column_indexes)
-
+				pos.append((row, column))
+	return pos
 
 def get_computer_play_position(board, player_marker):
 	'''This is the tic tac toe brain! It still not guarantee to win, but
@@ -141,18 +140,18 @@ def get_computer_play_position(board, player_marker):
 	'''
 
 	# Collect all the number of available spaces on board as indexes
-	row_indexes, column_indexes = get_available_board_indexes(board)
+	available_pos_list = get_available_board_indexes(board)
 
-	# Play move position based on how many available space already used up.			
-	if len(row_indexes) + len(column_indexes) == 0:
-		return random_position(baord, player)
-	if len(row_indexes) + len(column_indexes) == 1:
+	# Play move position based on how many available space are available			
+	if len(available_pos_list) == 9:
+		return random_position(available_pos_list)
+	if len(available_pos_list) == 8:
 		# If the middle piece is not played, let's take it
 		if board[1][1] == ' ':
 			return (1, 1)
 		else:
 			# Well, does not matter which position to play in this case
-			return random_position(row_indexes, column_indexes)
+			return random_position(available_pos_list)
 	else:
 		# Each player already placed at least one mark, now
 		# we need to check for wining moves.
@@ -169,23 +168,21 @@ def get_computer_play_position(board, player_marker):
 			if win_pos:
 				return win_pos
 			else:
-				return random_position(row_indexes, column_indexes)
+				return random_position(available_pos_list)
 
 
-def random_position(row_indexes, column_indexes):
+def random_position(available_pos_list):
 	'''Shuffle the given indexes and return two random row and column indexes'''
 	# We need to make a copy of param lists so we won't change it
-	r = list(row_indexes)
-	c = list(column_indexes)
-	random.shuffle(r)
-	random.shuffle(c)
-	return (r[0], c[0])
+	list_copy = list(available_pos_list)
+	random.shuffle(list_copy)
+	return list_copy[0]
 
 
 def check_boardfull(board):
 	'''Return true if there is no more space on board for markers, else false.'''
-	row_indexes, column_indexes = get_available_board_indexes(board)
-	if len(row_indexes) + len(column_indexes) == 0:
+	available_pos_list = get_available_board_indexes(board)
+	if len(available_pos_list) == 0:
 		return True
 	else:
 		return False
@@ -265,6 +262,8 @@ def main_loop():
 				# This should not happen, but added for safety check to ensure game
 				# is not corrupted
 				print("ERROR: Player selected invalid position: {} {}".format(row, column))
+				available_pos_list = get_available_board_indexes(board)
+				print("DEBUG: available_pos_list={}".format(available_pos_list))
 			else:	
 				board[row][column] = current_player_marker
 
