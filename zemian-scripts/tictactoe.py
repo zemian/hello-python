@@ -37,28 +37,67 @@ def print_board(board):
 def get_user_play_position(board, player_marker):
 	'''Ge user input on position to play. User need to enter row and column numbers,
 	and we will return zero based index of row and column.'''
-	print("You are playing {}".format(player_marker))
-	row = input("Please enter row number to play: ")
-	column = input("Please enter column number to play: ")
-	row = int(row) - 1
-	column = int(column) - 1
+	done = False
+	while not done:
+		print("You are playing {}".format(player_marker))
+		row = input("Please enter row number to play: ")
+		column = input("Please enter column number to play: ")
+		row = int(row) - 1
+		column = int(column) - 1
+		if (row > 2 or row < 0) or \
+			(column > 2 or column < 0) or \
+			(board[row][column] != ' '):
+			print("ERROR: Invalid position, please try again.")
+		else:
+			done = True
 	return (row, column)
 
 def about_to_win_pos(board, player_marker):
 	'''If a player marker has two markers in a row, column or diagonal, then
 	we have a about to win condition.'''
-	win_str = player_marker * 2
-	if ''.join(board[0]) == win_str or \
-		''.join(board[1]) == win_str or \
-		''.join(board[2]) == win_str or \
-		''.join([board[0][0], board[1][0], board[2][0]]) == win_str or \
-		''.join([board[0][1], board[1][1], board[2][1]]) == win_str or \
-		''.join([board[0][2], board[1][2], board[2][2]]) == win_str or \
-		''.join([board[0][0], board[1][1], board[2][2]]) == win_str or \
-		''.join([board[0][2], board[1][1], board[2][0]]) == win_str:
-		return True
+	if ''.join(board[0]).count(player_marker) == 2:
+		return (0, ''.join(board[0]).index(' '))
+	elif ''.join(board[1]).count(player_marker) == 2:
+		return (1, ''.join(board[1]).index(' '))
+	elif ''.join(board[2]).count(player_marker) == 2:
+		return (2, ''.join(board[2]).index(' '))
+	elif ''.join([board[0][0], board[1][0], board[2][0]]).count(player_marker) == 2:
+		if board[0][0] == ' ':
+			return (0, 0)
+		elif board[1][0] == ' ':
+			return (1, 0)
+		else:
+			return (2, 0)
+	elif ''.join([board[0][1], board[1][1], board[2][1]]).count(player_marker) == 2:
+		if board[0][1] == ' ':
+			return (0, 1)
+		elif board[1][1] == ' ':
+			return (1, 1)
+		else:
+			return (2, 1)
+	elif ''.join([board[0][2], board[1][2], board[2][2]]).count(player_marker) == 2:
+		if board[0][2] == ' ':
+			return (0, 2)
+		elif board[1][2] == ' ':
+			return (1, 2)
+		else:
+			return (2, 2)
+	elif ''.join([board[0][0], board[1][1], board[2][2]]).count(player_marker) == 2:
+		if board[0][0] == ' ':
+			return (0, 0)
+		elif board[1][1] == ' ':
+			return (1, 1)
+		else:
+			return (2, 2)
+	elif ''.join([board[0][2], board[1][1], board[2][0]]).count(player_marker) == 2:
+		if board[0][2] == ' ':
+			return (0, 2)
+		elif board[1][1] == ' ':
+			return (1, 1)
+		else:
+			return (2, 0)
 	else:
-		return False
+		return None
 
 def get_computer_play_position(board, player_marker):
 	# Count number of available spaces in board
@@ -136,6 +175,7 @@ def declare_winner(is_computer_player):
 
 def ask_play_again():
 	answer = input("Do you want to play again? Enter YES or NO: ")
+	answer = answer.upper()
 	if answer == 'YES':
 		return True
 	else:
