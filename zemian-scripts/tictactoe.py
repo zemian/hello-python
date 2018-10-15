@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # Zemian Deng 2018/10/8
 #
-# A simple solution to a tic tac toe game written in python
+# A simple solution to a tic tac toe game written in python3
 #
 
 import random
@@ -161,7 +161,7 @@ def get_computer_play_position(board, player_marker):
 		if win_pos:
 			return win_pos
 		else:
-			# Is opponent has winning move? If yet, block it, else
+			# Is opponent has winning move? If yes, block it, else
 			# give another random move as next move.
 			opponent_marker = get_opponent_marker(player_marker)
 			win_pos = about_to_win_pos(board, opponent_marker)
