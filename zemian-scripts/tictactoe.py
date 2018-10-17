@@ -59,16 +59,20 @@ def get_user_play_position(board, player_marker):
 	done = False
 	while not done:
 		print("You are playing {}".format(player_marker))
-		row = input("Please enter row number to play: ")
-		column = input("Please enter column number to play: ")
-		row = int(row) - 1
-		column = int(column) - 1
-		if (row > 2 or row < 0) or \
-			(column > 2 or column < 0) or \
-			(board[row][column] != ' '):
+		answer = input("Please enter row,column number to play: ")
+		row, column = answer.split(',')
+		try:
+			row = int(row) - 1
+			column = int(column) - 1
+			if (row > 2 or row < 0) or \
+				(column > 2 or column < 0) or \
+				(board[row][column] != ' '):
+				print("ERROR: Invalid position, please try again.")
+			else:
+				done = True
+		except:
 			print("ERROR: Invalid position, please try again.")
-		else:
-			done = True
+
 	return (row, column)
 
 def check_two_markers_in_row(row, player_marker):
@@ -283,6 +287,8 @@ def main_loop():
 
 		if not ask_play_again():
 			done = True
+		else:
+			print("Good Bye!")
 
 # Start of the game
 main_loop()
